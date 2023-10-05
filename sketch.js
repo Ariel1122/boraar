@@ -7,7 +7,7 @@ function setup() {
   //   // Puedes ajustar el número de pelotas que deseas
   //   pelotas.push(new Pelota());
   // }
-  pel1 = new Pelota(windowWidth / 2, windowHeight / 2);
+  pel1 = new Pelota();
 }
 
 function draw() {
@@ -22,11 +22,11 @@ function draw() {
 }
 
 class Pelota {
-  constructor(x, y) {
-    // this.posX = windowWidth;
-    // this.posY = windowHeight * 0.2;
-    this.posX = x;
-    this.posY = y;
+  constructor(_x, _y) {
+    this.posX = windowWidth / 2;
+    this.posY = windowHeight * 0.2;
+    // this.posX = _x;
+    // this.posY = _y;
     this.diam = random(10, 50);
     this.rad = this.diam / 2;
     this.velY = 0;
@@ -58,3 +58,10 @@ class Pelota {
     // ES NECESARIO EL WINDOW?
   }
 }
+
+// blue printe, se conoce al metedo, o plano de contruccion, en este caso el plano es la clase que contienen todos los elementos de codificacion, con el cual podemos repetir el objeto sin usando el mismo plano.
+// OOP - OBJECT ORIENTED PROGRAMING /PROGRAMACION ORIENTADA A OBJETOS.
+// ENCALUPSACION - EN EL CUAL TRBAJAMOS,(la funcion de update), encapsular una funcionalidad en una accion.
+// HERENCIA
+// POLIRMOFISMO-A SUS CARACTERISTICAS DE UN ELEMENTO PRINCIPAL O SUS SUBELEMENTOS HEREDADOS
+//
