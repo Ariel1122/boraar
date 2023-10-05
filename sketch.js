@@ -15,7 +15,7 @@ function draw() {
 
   // for (let pelota of pelotas) {
   //   pelota.update();
-  //   pelota.mostrar();
+  //   pelota.display();
   // }
   pel1.update();
   pel1.display();
