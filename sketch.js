@@ -7,7 +7,7 @@ function setup() {
   //   // Puedes ajustar el número de pelotas que deseas
   //   pelotas.push(new Pelota());
   // }
-  pel1 = new Pelota(100, 200);
+  pel1 = new Pelota(windowWidth / 2, windowHeight / 2);
 }
 
 function draw() {
@@ -22,16 +22,19 @@ function draw() {
 }
 
 class Pelota {
-  constructor() {
-    this.posX = windowWidth;
-    this.posY = windowHeight * 0.2;
+  constructor(x, y) {
+    // this.posX = windowWidth;
+    // this.posY = windowHeight * 0.2;
+    this.posX = x;
+    this.posY = y;
     this.diam = random(10, 50);
     this.rad = this.diam / 2;
     this.velY = 0;
     this.acel = 0.98;
     this.margen = 50;
     this.esp = 34;
-    this.piso = height - this.margen - this.esp / 2;
+    this.piso = windowHeight - this.margen - this.esp / 2;
+    rectMode(CENTER);
   }
 
   update() {
